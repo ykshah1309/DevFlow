@@ -12,7 +12,7 @@
 
 ## 📺 Demo Video
 
-**🎥 [Watch 2:50 Demo →](YOUR_GOOGLE_DRIVE_LINK_HERE)**
+**🎥 [Watch 2:50 Demo →](https://github.com/ykshah1309/DevFlow/blob/master/assets/video%20presentation.mp4)**
 
 ---
 
@@ -75,7 +75,7 @@ User Input → Supervisor (validate) → Environment Agent (detect stack)
 
 ### 🔒 Production-Grade Security
 
-![Security - Prompt Injection Blocked](./assets/prompt_injection_blocked.png)
+![Security - Prompt Injection Blocked](.[/assets/prompt_injection_blocked.png](https://github.com/ykshah1309/DevFlow/blob/master/assets/prompt%20injection%20attempt.png))
 
 - **Prompt injection detection** with keyword analysis
 - **Input validation** (email, GitHub username, repository format)
@@ -181,9 +181,7 @@ devflow-orchestrator/
 ## 📄 Documentation
 
 **Complete hackathon documentation:**
-- 📋 [Problem Statement](./docs/PROBLEM_STATEMENT.md)
-- 💡 [Solution Statement](./docs/SOLUTION_STATEMENT.md)
-- 🤖 [Agentic AI & watsonx Utilization](./docs/AGENTIC_AI_WATSONX_UTILIZATION.md)
+- 📋 [Problem and Solution Statement]([./docs/PROBLEM_STATEMENT.md](https://github.com/ykshah1309/DevFlow/blob/master/assets/project_documentation.txt))
 
 ---
 
@@ -215,8 +213,6 @@ cd devflow-orchestrator
    - For each agent: Actions → Deploy
    - Test in Chat interface
 
-**Detailed setup:** See [`docs/SETUP.md`](./docs/SETUP.md)
-
 ---
 
 ## 🎯 Judging Criteria Alignment
@@ -234,9 +230,7 @@ cd devflow-orchestrator
 
 ## 📞 Contact
 
-**Team:** [Your Name / Team Name]  
-**Email:** your.email@example.com  
-**GitHub:** [@your_username](https://github.com/your_username)
+**Team:** Artificially Intelligent  
 
 **Hackathon:** IBM Dev Day AI Demystified 2026  
 **Submission Date:** February 1, 2026
