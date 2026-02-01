@@ -1,0 +1,28 @@
+Junior Developer Template (14 days):
+Week 1: Foundations (Project context, data layer, business logic, testing)
+Week 2: First contribution (Domain prep, coding, code review)
+Est. hours per day: 4-6 hours
+
+Mid Developer Template (7 days):
+Week 1 compressed: Architecture patterns, core modules, testing (4 days)
+Week 2: First contribution (3 days)
+Est. hours per day: 6-8 hours
+
+Senior Developer Template (3 days):
+Day 1: Codebase scan, identify key modules
+Day 2: Deep dive core business logic only
+Day 3: Take on first issue independently
+Est. hours per day: 6-8 hours
+
+Official Documentation Sources (APPROVED ONLY):
+JavaScript: nodejs.org, developer.mozilla.org, expressjs.com
+Python: python.org, docs.djangoproject.com, flask.palletsprojects.com
+Ruby: ruby-lang.org, guides.rubyonrails.org
+Databases: postgresql.org, mongodb.com/docs, dev.mysql.com
+Testing: jestjs.io, mochajs.org, docs.pytest.org
+
+Red Flags (alert mentor):
+- Setup broken after Day 2
+- Can't understand README after 4 readings
+- Stuck on same file > 4 hours
+- No PR opened by Day 12 (Junior) / Day 7 (Mid) / Day 3 (Senior)

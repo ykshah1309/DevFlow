@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Slack Notification Tool",
+    "version": "1.1.0"
+  },
+  "servers": [
+    {
+      "url": "https://slack.com/api"
+    }
+  ],
+  "paths": {
+    "/chat.postMessage": {
+      "post": {
+        "summary": "Send message to Slack",
+        "operationId": "slack_send_message",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["channel", "text"],
+                "properties": {
+                  "channel": { "type": "string" },
+                  "text": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Success" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "x-ibm-annotations": {
+    "enforce-bearer": true
+  }
+}

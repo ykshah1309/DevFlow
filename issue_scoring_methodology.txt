@@ -1,0 +1,41 @@
+Complexity Scoring Formula (1-10 scale):
+Base score = lines_of_code_to_change / 20
+Capped at 10 maximum
+
+Adjustments:
++1 if issue body mentions "bug" or "fix" (debugging required)
++2 if issue body mentions "refactor" (architectural understanding needed)
+-2 if issue labels include "documentation" or body mentions "README" (easier)
+-1 if issue labels include "good-first-issue" and "easy" together (explicitly marked simple)
+
+Final complexity = min(10, base_score + adjustments)
+
+Skill Match Scoring (1-10 scale):
+Extract technologies mentioned in issue body (keywords: React, Python, API, database, etc.)
+Match against developer's completed_learning_topics array
+matches_count = number of overlapping technologies
+Skill match score = min(10, matches_count * 3)
+0 matches = 0 score, 3+ matches = 10 score
+
+Learning Value Scoring (1-10 scale):
+Base value = 5
++2 if labels include "testing" (teaches test practices)
++1 if labels include "documentation" (teaches communication)
++2 if body mentions "follow pattern in [filename]" (teaches project conventions)
++1 if body mentions "similar to PR #X" (provides example)
+Final learning value = min(10, base_value + bonuses)
+
+Total Score Calculation:
+total = (complexity * 0.4) + (skill_match * 0.4) + (learning_value * 0.2)
+Weights prioritize appropriate complexity and skill alignment over pure learning value.
+
+Experience-Based Filtering:
+Junior: Complexity between 2-5, estimated time < 8 hours
+Mid: Complexity between 3-7, estimated time < 12 hours
+Senior: Complexity between 5-10, any time estimate
+
+Time Estimation:
+Complexity 1-3: 2-4 hours
+Complexity 4-6: 4-6 hours
+Complexity 7-9: 6-8 hours
+Complexity 10: 8+ hours

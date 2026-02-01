@@ -1,0 +1,163 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Consolidated GitHub DevFlow Tools",
+    "version": "1.2.0",
+    "description": "A comprehensive set of GitHub REST API tools for the DevFlow onboarding system, including enhanced analysis and branch management."
+  },
+  "servers": [
+    {
+      "url": "https://api.github.com"
+    }
+  ],
+  "paths": {
+    "/repos/{owner}/{repo}": {
+      "get": {
+        "summary": "Enhanced repository analysis",
+        "description": "Retrieves comprehensive repository metadata including languages, dependency files, and basic info for tech stack detection.",
+        "operationId": "github_analyze_repo_enhanced",
+        "parameters": [
+          { "name": "owner", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "repo", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Repository data retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "full_name": { "type": "string" },
+                    "description": { "type": "string" },
+                    "default_branch": { "type": "string" },
+                    "language": { "type": "string" },
+                    "languages": { "type": "object", "additionalProperties": { "type": "integer" } },
+                    "dependency_files": { "type": "array", "items": { "type": "string" } },
+                    "directory_structure": { "type": "array", "items": { "type": "string" } }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/repos/{owner}/{repo}/contents/{path}": {
+      "get": {
+        "summary": "Get file content",
+        "description": "Retrieves content of a specific file (README.md, package.json, etc.)",
+        "operationId": "github_get_file",
+        "parameters": [
+          { "name": "owner", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "repo", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "path", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "File content retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "path": { "type": "string" },
+                    "content": { "type": "string", "description": "Base64 encoded content" },
+                    "encoding": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/repos/{owner}/{repo}/branches": {
+      "get": {
+        "summary": "List branches",
+        "operationId": "github_list_branches",
+        "parameters": [
+          { "name": "owner", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "repo", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of branches",
+            "content": {
+              "application/json": {
+                "schema": { "type": "array", "items": { "type": "object" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/repos/{owner}/{repo}/git/refs": {
+      "post": {
+        "summary": "Create new branch",
+        "operationId": "github_create_branch",
+        "parameters": [
+          { "name": "owner", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "repo", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ref": { "type": "string", "description": "Branch ref: refs/heads/branch-name" },
+                  "sha": { "type": "string", "description": "Commit SHA to branch from" }
+                },
+                "required": ["ref", "sha"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Branch created" },
+          "422": { "description": "Branch already exists" }
+        }
+      }
+    },
+    "/repos/{owner}/{repo}/issues": {
+      "get": {
+        "summary": "List issues",
+        "operationId": "github_list_issues",
+        "parameters": [
+          { "name": "owner", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "repo", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "labels", "in": "query", "required": false, "schema": { "type": "string" } },
+          { "name": "state", "in": "query", "required": false, "schema": { "type": "string", "enum": ["open", "closed", "all"] } }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of issues",
+            "content": {
+              "application/json": {
+                "schema": { "type": "array", "items": { "type": "object" } }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "GitHub Personal Access Token"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

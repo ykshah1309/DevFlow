@@ -1,0 +1,2 @@
+requests==2.31.0        # HTTP client, stable, no conflicts
+python-dotenv==1.0.0    # Env var management, lightweight

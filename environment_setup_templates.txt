@@ -1,0 +1,19 @@
+Node.js + Express Setup Template:
+Prerequisites: Node.js 18+, Git, npm
+Steps: git clone, npm install, .env configuration, npm start
+Expected time: 15-30 minutes
+
+Python + Django Setup Template:
+Prerequisites: Python 3.8+, pip, virtualenv
+Steps: git clone, pip install -r requirements.txt, python manage.py migrate, runserver
+Expected time: 20-35 minutes
+
+Ruby + Rails Setup Template:
+Prerequisites: Ruby 3.0+, bundler
+Steps: git clone, bundle install, rails db:setup, rails server
+Expected time: 25-40 minutes
+
+Database Configuration Templates:
+PostgreSQL: DATABASE_URL format, createdb command
+MongoDB: Connection string format, mongosh commands
+MySQL: Connection format, mysql -u root commands
