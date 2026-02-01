@@ -180,7 +180,7 @@ devflow-orchestrator/
 ## 📄 Documentation
 
 **Complete hackathon documentation:**
-- 📋 [Problem and Solution Statement](https://github.com/ykshah1309/DevFlow/blob/master/assets/project%20documentation.txt)
+- 📋 [Problem and Solution Statement](https://github.com/ykshah1309/DevFlow/blob/master/assets/project_documentation.txt)
 
 ---
 
