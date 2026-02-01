@@ -39,7 +39,7 @@ Four agentic AI agents working together:
 
 ## 🏗️ System Architecture
 
-![System Architecture]([./assets/architecture_diagram.png](https://github.com/ykshah1309/DevFlow/blob/master/assets/prompt%20injection%20attempt.png))
+![System Architecture](https://github.com/ykshah1309/DevFlow/blob/master/assets/system%20design.png)
 
 **Multi-Agent Orchestration Pattern:**
 ```
@@ -75,8 +75,7 @@ User Input → Supervisor (validate) → Environment Agent (detect stack)
 
 ### 🔒 Production-Grade Security
 
-![Security - Prompt Injection Blocked](.[/assets/prompt_injection_blocked.png](https://github.com/ykshah1309/DevFlow/blob/master/assets/prompt%20injection%20attempt.png))
-
+![Security - Prompt Injection Blocked]([/assets/prompt_injection_blocked.png](https://github.com/ykshah1309/DevFlow/blob/master/assets/system%20design.png))
 - **Prompt injection detection** with keyword analysis
 - **Input validation** (email, GitHub username, repository format)
 - **API key vault** in watsonx Orchestrate
