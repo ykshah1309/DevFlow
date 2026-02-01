@@ -39,7 +39,7 @@ Four agentic AI agents working together:
 
 ## 🏗️ System Architecture
 
-![System Architecture](./assets/architecture_diagram.png)
+![System Architecture]([./assets/architecture_diagram.png](https://github.com/ykshah1309/DevFlow/blob/master/assets/prompt%20injection%20attempt.png))
 
 **Multi-Agent Orchestration Pattern:**
 ```
