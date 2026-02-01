@@ -75,7 +75,7 @@ User Input → Supervisor (validate) → Environment Agent (detect stack)
 
 ### 🔒 Production-Grade Security
 
-![Security - Prompt Injection Blocked]([/assets/prompt_injection_blocked.png](https://github.com/ykshah1309/DevFlow/blob/master/assets/system%20design.png))
+![Security - Prompt Injection Blocked](https://github.com/ykshah1309/DevFlow/blob/master/assets/prompt%20injection%20attempt.png)
 - **Prompt injection detection** with keyword analysis
 - **Input validation** (email, GitHub username, repository format)
 - **API key vault** in watsonx Orchestrate
@@ -180,7 +180,7 @@ devflow-orchestrator/
 ## 📄 Documentation
 
 **Complete hackathon documentation:**
-- 📋 [Problem and Solution Statement]([./docs/PROBLEM_STATEMENT.md](https://github.com/ykshah1309/DevFlow/blob/master/assets/project_documentation.txt))
+- 📋 [Problem and Solution Statement](https://github.com/ykshah1309/DevFlow/blob/master/assets/project%20documentation.txt)
 
 ---
 
